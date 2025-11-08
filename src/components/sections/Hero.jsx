@@ -6,12 +6,11 @@ import { Download } from "lucide-react";
 
 export default function Hero({ darkMode }) {
   const handleDownloadCV = () => {
-    // You can replace this with your actual CV file path
-    const link = document.createElement('a');
-    link.href = '/cv.pdf'; // Make sure to add your CV file in public folder
-    link.download = 'Taelly_CV.pdf';
-    link.click();
-  };
+  const link = document.createElement('a');
+  link.href = `${import.meta.env.BASE_URL || ''}/taelly_cv.pdf`; // Updated path
+  link.download = 'taelly_cv.pdf';
+  link.click();
+};
 
   return (
     <Section id="home" className="min-h-screen flex items-center">
