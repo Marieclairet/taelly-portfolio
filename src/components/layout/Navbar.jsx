@@ -32,8 +32,8 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         className={`fixed top-0 w-full z-50 backdrop-blur-lg border-b transition-colors ${darkMode
-            ? "bg-gray-900/80 border-gray-700"
-            : "bg-white/80 border-gray-200"
+          ? "bg-gray-900/80 border-gray-700"
+          : "bg-white/80 border-gray-200"
           }`}
       >
         <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
@@ -43,7 +43,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
             className="flex items-center gap-2 ml-7"
           >
             <img
-              src="/logo.png"
+              src={`${import.meta.env.BASE_URL}logo.png`}
               alt="Taelly Logo"
               className="w-20 h-20 rounded-lg object-contain"
             />
@@ -63,8 +63,8 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
                   document.getElementById(item)?.scrollIntoView({ behavior: 'smooth' });
                 }}
                 className={`font-medium transition-all duration-300 hover:text-pink-500 ${activeSection === item
-                    ? "text-pink-500 border-b-2 border-pink-500"
-                    : "text-gray-600 dark:text-gray-300"
+                  ? "text-pink-500 border-b-2 border-pink-500"
+                  : "text-gray-600 dark:text-gray-300"
                   }`}
               >
                 {item.charAt(0).toUpperCase() + item.slice(1)}
@@ -79,8 +79,8 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className={`p-2 rounded-lg transition-colors ${darkMode
-                  ? "text-gray-300 hover:bg-gray-800"
-                  : "text-gray-600 hover:bg-gray-200"
+                ? "text-gray-300 hover:bg-gray-800"
+                : "text-gray-600 hover:bg-gray-200"
                 }`}
             >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -96,8 +96,8 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               className={`md:hidden border-t ${darkMode
-                  ? "border-gray-700 bg-gray-900/95"
-                  : "border-gray-200 bg-white/95"
+                ? "border-gray-700 bg-gray-900/95"
+                : "border-gray-200 bg-white/95"
                 }`}
             >
               <div className="px-6 py-4 space-y-4">
@@ -107,8 +107,8 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
                     href={`#${item}`}
                     onClick={(e) => handleNavClick(item, e)}
                     className={`block py-2 font-medium transition-all duration-300 hover:text-pink-500 ${activeSection === item
-                        ? "text-pink-500 border-l-4 border-pink-500 pl-3"
-                        : "text-gray-600 dark:text-gray-300 pl-4"
+                      ? "text-pink-500 border-l-4 border-pink-500 pl-3"
+                      : "text-gray-600 dark:text-gray-300 pl-4"
                       }`}
                   >
                     {item.charAt(0).toUpperCase() + item.slice(1)}
