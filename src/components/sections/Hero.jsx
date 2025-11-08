@@ -98,7 +98,7 @@ export default function Hero({ darkMode }) {
               {/* Your Profile Picture */}
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="profilepic.jpg" // Replace with your actual image path
+                  src="profilepic.jpg" 
                   alt="Taelly"
                   className="w-full h-full object-cover"
                 />
